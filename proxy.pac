@@ -3,6 +3,8 @@ function FindProxyForURL(url,host) {
   //if( isInNet(myIpAddress(), "192.168.0.0", "255.255.0.0")) return "DIRECT";
 
   if( isPlainHostName(host)) return "DIRECT";
+  if( shExpMatch( host, "*.idealonline.com.tr")) return "PROXY 193.140.28.22:3128";
+  if( shExpMatch( host, "*.omu.edu.tr")) return "PROXY 193.140.28.22:3128";
   if( shExpMatch( host, "*.wikipedia.org")) return "PROXY 193.140.28.22:3128";
   if( shExpMatch( host, "*.lexiqamus.com")) return "PROXY 193.140.28.22:3128";
   if( shExpMatch( host, "heinonline.org")) return "PROXY 193.140.28.22:3128";
